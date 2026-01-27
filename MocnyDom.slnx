@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="../MocnyDom.Application/MocnyDom.Application.csproj" />
+  <Project Path="../MocnyDom.Domain/MocnyDom.Domain.csproj" />
+  <Project Path="../MocnyDom.Infrastructure/MocnyDom.Infrastructure.csproj" />
   <Project Path="MocnyDom.csproj" />
 </Solution>
