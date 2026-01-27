@@ -1,0 +1,12 @@
+D:\Project_Zespolowy\MocnyDom.Domain\bin\Debug\net10.0\MocnyDom.Domain.deps.json
+D:\Project_Zespolowy\MocnyDom.Domain\bin\Debug\net10.0\MocnyDom.Domain.dll
+D:\Project_Zespolowy\MocnyDom.Domain\bin\Debug\net10.0\MocnyDom.Domain.pdb
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.AssemblyInfoInputs.cache
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.AssemblyInfo.cs
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.csproj.CoreCompileInputs.cache
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.dll
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\refint\MocnyDom.Domain.dll
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.pdb
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\ref\MocnyDom.Domain.dll
+D:\Project_Zespolowy\MocnyDom.Domain\obj\Debug\net10.0\MocnyDom.Domain.csproj.AssemblyReference.cache
