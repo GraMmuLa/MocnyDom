@@ -7,7 +7,7 @@ namespace MocnyDom.Controllers
 {
     [ApiController]
     [Route("api/manager/events")]
-    [Authorize(Roles = "Manager")]
+    [Authorize(Roles = "Manager,Admin")]
     public class ManagerEventsController : ControllerBase
     {
         private readonly IEventService _eventService;

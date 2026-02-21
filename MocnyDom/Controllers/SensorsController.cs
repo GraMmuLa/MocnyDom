@@ -8,7 +8,7 @@ namespace MocnyDom.Controllers
 {
     [ApiController]
     [Route("api/manager/sensors")]
-    [Authorize(Roles = "Manager")]
+    [Authorize(Roles = "Manager,Admin")]
     public class SensorsController : ControllerBase
     {
         private readonly ISensorService _sensorService;

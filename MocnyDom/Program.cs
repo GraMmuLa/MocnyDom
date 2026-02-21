@@ -23,6 +23,9 @@ builder.Services.AddScoped<IEventService, EventService>();
 // JWT Service
 builder.Services.AddScoped<IJwtService, JwtService>();
 
+// Auth service
+builder.Services.AddTransient<IAuthService, AuthService>();
+
 // Email
 builder.Services.AddScoped<IEmailService, SmtpEmailService>();
 

@@ -1,10 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+﻿using Microsoft.AspNetCore.Mvc;
 using MocnyDom.Application.DTOs;
+using MocnyDom.Application.Exceptions;
 using MocnyDom.Application.Services;
 
 namespace MocnyDom.Controllers
@@ -13,64 +9,39 @@ namespace MocnyDom.Controllers
     [Route("auth")]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IJwtService _jwtService;
+        private readonly IAuthService _authService;
 
-        public AuthController(UserManager<IdentityUser> userManager, IJwtService jwtService)
+        public AuthController(IAuthService authService)
         {
-            _userManager = userManager;
-            _jwtService = jwtService;
+            _authService = authService;
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
         {
-            ArgumentNullException.ThrowIfNull(request);
-            var user = await _userManager.FindByNameAsync(request.Username);
-            if (user == null)
-                return Unauthorized("Invalid username or password");
-
-            if (!await _userManager.CheckPasswordAsync(user, request.Password))
-                return Unauthorized("Invalid username or password");
-
-            var roles = await _userManager.GetRolesAsync(user);
-
-            var claims = new List<Claim>
+            
+            try
             {
-                new Claim(ClaimTypes.Name, user.UserName!)
-            };
-
-            foreach (var role in roles)
-                claims.Add(new Claim(ClaimTypes.Role, role));
-
-            Tuple<string, DateTime> jwtResult = await _jwtService.GenerateJwt(claims);
-
-            return Ok(new
+                return Ok(await _authService.Login(request));
+            } catch(InvalidUsernameException ex)
             {
-                username = user.UserName,
-                roles = roles,
-                token = jwtResult.Item1,
-                expires = jwtResult.Item2
-            });
+                return Unauthorized(ex.Message);
+            } catch(InvalidPasswordException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDto request)
         {
-            var user = new IdentityUser
+            try
             {
-                UserName = request.Username,
-                Email = request.Email
-            };
-
-            var result = await _userManager.CreateAsync(user, request.Password);
-
-            if (!result.Succeeded)
-                return BadRequest(result.Errors);
-
-            await _userManager.AddToRoleAsync(user, "User");
-
-            return Ok("User created");
+                return Ok(await _authService.Register(request));
+            } catch(RegistrationFailedException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

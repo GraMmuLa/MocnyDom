@@ -22,6 +22,21 @@ namespace MocnyDom.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BuildingManager", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("BuildingId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "BuildingId");
+
+                    b.HasIndex("BuildingId");
+
+                    b.ToTable("BuildingManagers");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -237,30 +252,6 @@ namespace MocnyDom.Infrastructure.Migrations
                     b.ToTable("Buildings");
                 });
 
-            modelBuilder.Entity("MocnyDom.Domain.Entities.BuildingManager", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BuildingId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BuildingId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("BuildingManagers");
-                });
-
             modelBuilder.Entity("MocnyDom.Domain.Entities.Event", b =>
                 {
                     b.Property<int>("Id")
@@ -272,11 +263,16 @@ namespace MocnyDom.Infrastructure.Migrations
                     b.Property<int>("SensorId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -344,15 +340,33 @@ namespace MocnyDom.Infrastructure.Migrations
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RoomId");
 
                     b.ToTable("Sensors");
+                });
+
+            modelBuilder.Entity("BuildingManager", b =>
+                {
+                    b.HasOne("MocnyDom.Domain.Entities.Building", "Building")
+                        .WithMany("Managers")
+                        .HasForeignKey("BuildingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Building");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -404,25 +418,6 @@ namespace MocnyDom.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("MocnyDom.Domain.Entities.BuildingManager", b =>
-                {
-                    b.HasOne("MocnyDom.Domain.Entities.Building", "Building")
-                        .WithMany("Managers")
-                        .HasForeignKey("BuildingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Building");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("MocnyDom.Domain.Entities.Event", b =>

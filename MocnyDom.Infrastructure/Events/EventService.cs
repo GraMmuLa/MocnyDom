@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MocnyDom.Application.DTOs;
 using MocnyDom.Application.Email;
-using MocnyDom.Application.Services.Events;
+using MocnyDom.Application.Services;
 using MocnyDom.Domain.Entities;
 using MocnyDom.Domain.Enums;
 using MocnyDom.Infrastructure.Persistence;

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
+using Microsoft.Extensions.Configuration;
 using MocnyDom.Domain.Entities;
 
 namespace MocnyDom.Infrastructure.Persistence
@@ -18,6 +20,16 @@ namespace MocnyDom.Infrastructure.Persistence
         public DbSet<BuildingManager> BuildingManagers { get; set; }
         public DbSet<Sensor> Sensors { get; set; }
         public DbSet<Event> Events { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                b => b.MigrationsAssembly("MocnyDom.Infrastructure"));
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

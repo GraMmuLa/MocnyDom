@@ -5,7 +5,7 @@ using MocnyDom.Application.Services;
 
 [ApiController]
 [Route("api/manager/sensors")]
-[Authorize(Roles = "Manager")]
+[Authorize(Roles = "Manager,Admin")]
 public class ManagerSensorsController : ControllerBase
 {
     private readonly ISensorService _service;

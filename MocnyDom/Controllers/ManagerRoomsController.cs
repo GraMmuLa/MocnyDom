@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/manager/rooms")]
-[Authorize(Roles = "Manager")]
+[Authorize(Roles = "Manager,Admin")]
 public class ManagerRoomsController : ControllerBase
 {
     private readonly IRoomService _service;

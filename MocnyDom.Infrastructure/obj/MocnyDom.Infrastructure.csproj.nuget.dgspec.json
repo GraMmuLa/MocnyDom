@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project_Zespolowy\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj": {}
+    "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Project_Zespolowy\\MocnyDom.Application\\MocnyDom.Application.csproj": {
+    "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Application\\MocnyDom.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project_Zespolowy\\MocnyDom.Application\\MocnyDom.Application.csproj",
+        "projectUniqueName": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Application\\MocnyDom.Application.csproj",
         "projectName": "MocnyDom.Application",
-        "projectPath": "D:\\Project_Zespolowy\\MocnyDom.Application\\MocnyDom.Application.csproj",
-        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
-        "outputPath": "D:\\Project_Zespolowy\\MocnyDom.Application\\obj\\",
+        "projectPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Application\\MocnyDom.Application.csproj",
+        "packagesPath": "C:\\Users\\polif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\polif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj": {
-                "projectPath": "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj"
+              "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj": {
+                "projectPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj"
               }
             }
           }
@@ -62,6 +61,20 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.15.0, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -370,20 +383,20 @@
         }
       }
     },
-    "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj": {
+    "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj",
         "projectName": "MocnyDom.Domain",
-        "projectPath": "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj",
-        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
-        "outputPath": "D:\\Project_Zespolowy\\MocnyDom.Domain\\obj\\",
+        "projectPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj",
+        "packagesPath": "C:\\Users\\polif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\polif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -392,7 +405,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -425,6 +437,20 @@
               "target": "Package",
               "version": "[10.0.2, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.15.0, )"
+            },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[8.15.0, )"
@@ -732,20 +758,20 @@
         }
       }
     },
-    "D:\\Project_Zespolowy\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj": {
+    "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project_Zespolowy\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj",
         "projectName": "MocnyDom.Infrastructure",
-        "projectPath": "D:\\Project_Zespolowy\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
-        "outputPath": "D:\\Project_Zespolowy\\MocnyDom.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Infrastructure\\MocnyDom.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\polif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\polif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -754,18 +780,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Project_Zespolowy\\MocnyDom.Application\\MocnyDom.Application.csproj": {
-                "projectPath": "D:\\Project_Zespolowy\\MocnyDom.Application\\MocnyDom.Application.csproj"
+              "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Application\\MocnyDom.Application.csproj": {
+                "projectPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Application\\MocnyDom.Application.csproj"
               },
-              "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj": {
-                "projectPath": "D:\\Project_Zespolowy\\MocnyDom.Domain\\MocnyDom.Domain.csproj"
+              "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj": {
+                "projectPath": "C:\\Users\\polif\\source\\repos\\MocnyDom\\MocnyDom.Domain\\MocnyDom.Domain.csproj"
               }
             }
           }
@@ -813,6 +838,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.2, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.15.0, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",

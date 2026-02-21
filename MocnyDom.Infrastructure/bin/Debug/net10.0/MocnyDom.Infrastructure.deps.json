@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.2",
           "Microsoft.EntityFrameworkCore.Design": "10.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.2",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.15.0",
           "Microsoft.IdentityModel.Tokens": "8.15.0",
           "MocnyDom.Application": "1.0.0",
           "MocnyDom.Domain": "1.0.0",
@@ -381,7 +382,7 @@
           "Azure.Identity": "1.14.2",
           "Microsoft.Bcl.Cryptography": "9.0.4",
           "Microsoft.Data.SqlClient.SNI.runtime": "6.0.2",
-          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.15.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Configuration.ConfigurationManager": "9.0.4"
@@ -567,14 +568,14 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/8.0.1": {
+      "Microsoft.IdentityModel.JsonWebTokens/8.15.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "8.15.0"
         },
         "runtime": {
-          "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
-            "assemblyVersion": "8.0.1.0",
-            "fileVersion": "8.0.1.50722"
+          "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "8.15.0.0",
+            "fileVersion": "8.15.0.61118"
           }
         }
       },
@@ -795,7 +796,7 @@
       },
       "System.IdentityModel.Tokens.Jwt/8.0.1": {
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.15.0",
           "Microsoft.IdentityModel.Tokens": "8.15.0"
         },
         "runtime": {
@@ -825,6 +826,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.2",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.15.0",
           "Microsoft.IdentityModel.Tokens": "8.15.0",
           "MocnyDom.Domain": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -841,6 +844,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.2",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.15.0",
           "Microsoft.IdentityModel.Tokens": "8.15.0",
           "Swashbuckle.AspNetCore": "6.5.0",
           "Swashbuckle.AspNetCore.Swagger": "6.5.0"
@@ -1028,12 +1033,12 @@
       "path": "microsoft.identitymodel.abstractions/8.15.0",
       "hashPath": "microsoft.identitymodel.abstractions.8.15.0.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.JsonWebTokens/8.0.1": {
+    "Microsoft.IdentityModel.JsonWebTokens/8.15.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-s6++gF9x0rQApQzOBbSyp4jUaAlwm+DroKfL8gdOHxs83k8SJfUXhuc46rDB3rNXBQ1MVRxqKUrqFhO/M0E97g==",
-      "path": "microsoft.identitymodel.jsonwebtokens/8.0.1",
-      "hashPath": "microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512"
+      "sha512": "sha512-3513f5VzvOZy3ELd42wGnh1Q3e83tlGAuXFSNbENpgWYoAhLLzgFtd5PiaOPGAU0gqKhYGVzKavghLUGfX3HQg==",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.15.0",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.8.15.0.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Logging/8.15.0": {
       "type": "package",
