@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MocnyDom.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4d1ece2c01cff18f17281cde0f28810ccf1616f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9549b29af9073931a591d6b1431c3b8d711a964b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MocnyDom.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MocnyDom.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
